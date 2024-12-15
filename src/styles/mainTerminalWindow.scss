@@ -1,0 +1,100 @@
+:root {
+  --radius: 6px;
+}
+
+.LsDisplayTaskbar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-color: var(--terminal-header);
+  color: var(--secondaryText);
+  width: 100%;
+  padding: 6px !important;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px !important;
+}
+
+.LsDisplayWindow:focus-within > .LsDisplayTaskbar {
+  background-color: var(--terminal-header);
+  border-bottom: 1px solid var(--borderColor);
+  transition: background-color 0.4s ease-in-out;
+}
+
+.LsDisplayWindow {
+  border: 1px solid var(--borderColor);
+  background-color: var(--windowBg);
+  width: 90% !important;
+  max-width: 1400px !important;
+  margin: 1.5rem auto !important;
+  justify-content: flex-start;
+  min-height: 55vh !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.12);
+  padding-bottom: 1.5vh !important;
+  border-radius: 6px;
+  transition: background-color 0.4s ease-in-out;
+  margin-bottom: 3vh !important;
+
+  h3 {
+    padding: 6px !important;
+    margin-bottom: 0 !important;
+    display: inline-flex;
+    flex-wrap: wrap;
+    white-space: pre-wrap;
+    font-family: "Ubuntu Mono", monospace !important;
+    color: var(--primaryText);
+    font-size: var(--font-md) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .LsDisplayWindow {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}
+
+.mappedItemsList {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Ubuntu Mono", monospace;
+  
+  li {
+    padding-block: 3px;
+    color: var(--primaryText);
+  }
+}
+
+.projects-items {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.infoItem {
+  padding-left: 20px;
+}
+
+.miniProject {
+  order: 2;
+}
+
+.miniProjects {
+  order: 3;
+}
+
+li {
+  padding-block: 3px;
+}
+
+@media (max-width: 1024px) {
+  li {
+    padding-block: 6px;
+  }
+}
